@@ -1,0 +1,22 @@
+
+\newcommand{\presentationTitle}{Développement d'une approche de distribution des espaces d'états basée sur la théorie de jeux : \\Application au model checking distribué}
+\newcommand{\shortTitle}{\textbf{Approche de distribution des espaces d'états basée sur la théorie de jeux}}
+\newcommand{\presentationSubtitle}{Ein Template für die \LaTeX{}-Klasse \enquote{Beamer}}
+\newcommand{\university}{Université Constantine 2}
+\newcommand{\universityCourse}{IFA}
+\newcommand{\universityDepartment}{Faculté des Nouvelles Technologies \\Département d’Informatique Fondamentale et\\ ses Applications}
+\newcommand{\presentationKeywords}{\LaTeX, Beamer}
+\newcommand{\presentationAuthor}{Karimou Seyni Ibrahim}
+\newcommand{\presentationAuthorShort}{Karimou.S.I}
+\newcommand{\presentationAuthorEmail}{ibrahim.karimouseyni@yahoo.com}
+\newcommand{\presentationSubject}{Informatique}
+\newcommand{\presentationLocation}{Leipzig}
+
+
+\title[\shortTitle]{\presentationTitle{}}
+\subtitle{\presentationSubtitle}
+\author[\presentationAuthorShort]{\large \presentationAuthor}
+ 
+\date{\today} 
+
+

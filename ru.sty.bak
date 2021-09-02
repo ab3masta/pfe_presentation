@@ -1,0 +1,193 @@
+% Copyright 2009 by Pim Vullers
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+
+
+%%%
+%%% Inherit definitions from existing themes (DO NOT MODIFY THESE)
+%%%\usetheme{warsaw}
+\mode<presentation>{}
+% Layout scheme for outer elements: split header and footer
+\useoutertheme{split}
+
+% Color scheme for outer elements: use background colors
+\usecolortheme{whale}
+\useoutertheme{split}
+\setbeamercolor*{titlelike}{parent=structure}
+% Layout scheme for inner elements: rounded elements
+\useinnertheme{rounded} 
+
+% Color scheme for inner elements: use foreground colors
+\usecolortheme{orchid}
+
+
+%%%
+%%% Tweak definitions of inner theme to match personal preferences (MODIFY THESE)
+%%%
+
+% Itemize items: default (triangle), circle, square, ball
+\setbeamertemplate{itemize items}[triangle]
+
+% Enumerate items: default, circle, square, ball
+\setbeamertemplate{enumerate items}[circle]
+
+% Outline: default, sections numbered, subsections numbered, circle, square, ball, ball unnumbered
+\setbeamertemplate{sections/subsections in toc}[default]
+
+% General blocks: 
+\setbeamertemplate{blocks}[rounded]
+
+% Title page:
+%\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true]
+
+% -----------------------------------
+% title page
+% -----------------------------------
+
+% define the meta stuff for the titelframe
+\title[Identification et détection d'attaques DDoS dans les reseaux IoT]{\large \textbf{Approche résiliente pour l'identification et la détection des attaques DDoS dans les réseaux IoT}}
+%\subtitle{\presentationSubtitle}
+\institute[]{
+    {\large \textsc{\textbf{Université Constantine 2 - Abdelhamid MEHRI}}}
+    \par\medskip
+    {\tiny Faculté des Nouvelles Technologies de l'Information et de la Communication - NTIC\\Département d'Informatique Fondamentale et ses Application - IFA}
+}
+\author[Université Constantine 2]{}
+\titlegraphic{\includegraphics[width=30mm]{images/uc2}} % logo
+\date{\today}
+
+% customized title page layout
+\defbeamertemplate*{title page}{customized}[1][]
+{
+     \centering
+    \par
+    \usebeamercolor[fg]{normal text}
+    \usebeamerfont{institute}{\usebeamercolor[fg]{institute}\insertinstitute}\par
+    \resizebox{!}{1.5cm}{\inserttitlegraphic}
+    \vspace{1cm}
+
+    	{
+       	\setbeamercolor{coloredboxstuff}{fg=white,bg=blueforest}  
+       	\begin{beamercolorbox}[wd=\paperwidth,sep=4pt,center,#1]{coloredboxstuff}
+    	\usebeamerfont{title}{\inserttitle}
+    	\end{beamercolorbox}   
+    	}
+
+        \usebeamercolor[fg]{normal text}
+        
+\vspace{1cm}
+
+    { \begin{tabular}{l r}
+\hspace{1cm}\textbf{Présenté par :}&\hspace{3cm}\textbf{Sous la Direction de :}\\
+\hspace{1cm}\textbf{Japhet DIARRA }&\textbf{$M^{r}$ Amir DJENNA}\\
+\hspace{1cm}\textbf{ Mamadou DIARRA MAKADJI TB}&\textbf{}
+    	\end{tabular}  
+    \vfill
+    \begin{center}
+    	\usebeamerfont{date}\insertdate
+    \end{center}     
+    }
+
+}
+
+% Part page:
+\setbeamertemplate{part page}[default][colsep=-4bp,rounded=true]
+
+% Navigation symbols:
+\setbeamertemplate{navigation symbols}{}
+
+
+%%%
+%%% Tweak definitions of outer theme to match Radboud (website) style
+%%%
+
+% Background
+%\pgfdeclareimage[width=\paperwidth,height=\paperheight]{bg}{ft_background}
+%\setbeamertemplate{background}{\pgfuseimage{bg}}
+
+% Colors
+\usecolortheme[RGB={00,74,09}]{structure}
+
+\setbeamercolor{frametitle}{parent=subsection in head/foot}
+\setbeamercolor{frametitle right}{parent=section in head/foot}
+
+
+\pgfdeclarehorizontalshading[frametitle.bg,frametitle right.bg]{beamer@frametitleshade}{\paperheight}{%
+  color(0pt)=(frametitle.bg);
+  color(\paperwidth)=(frametitle right.bg)}
+
+\AtBeginDocument{
+  \pgfdeclareverticalshading{beamer@topshade}{\paperwidth}{%
+    color(0pt)=(bg);
+    color(4pt)=(black!50!bg)}
+}
+
+% Footline: AUTHOR | TITLE | DATE FRAMENUMBER
+
+\defbeamertemplate*{footline}{ru theme}{%
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortdate
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.416667\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+   \begin{beamercolorbox}[wd=0.083333\paperwidth,ht=2.25ex,dp=1ex,right]{title in head/foot}%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
+
+\defbeamertemplate*{frametitle}{ru theme}{%
+  \nointerlineskip%
+  %\vskip-2pt%
+  \hbox{\leavevmode
+    \advance\beamer@leftmargin by -12bp%
+    \advance\beamer@rightmargin by -12bp%
+    \beamer@tempdim=\textwidth%
+    \advance\beamer@tempdim by \beamer@leftmargin%
+    \advance\beamer@tempdim by \beamer@rightmargin%
+    \hskip-\Gm@lmargin\hbox{%
+      \setbox\beamer@tempbox=\hbox{\begin{minipage}[b]{\paperwidth}%
+          \vbox{}\vskip-.75ex%
+          \leftskip0.3cm%
+          \rightskip0.3cm plus1fil\leavevmode
+          \insertframetitle%
+          \ifx\insertframesubtitle\@empty%
+            \strut\par%
+          \else
+            \par{\usebeamerfont*{framesubtitle}{\usebeamercolor[fg]{framesubtitle}\insertframesubtitle}\strut\par}%
+          \fi%
+          \nointerlineskip
+          \vbox{}%
+          \end{minipage}}%
+      \beamer@tempdim=\ht\beamer@tempbox%
+      \advance\beamer@tempdim by 2pt%
+      \begin{pgfpicture}{0.1mm}{0pt}{1.01\paperwidth}{\beamer@tempdim}
+        \usebeamercolor{frametitle right}
+        \pgfpathrectangle{\pgfpointorigin}{\pgfpoint{\paperwidth}{\beamer@tempdim}}
+        \pgfusepath{clip}
+        \pgftext[left,base]{\pgfuseshading{beamer@frametitleshade}}
+      \end{pgfpicture}
+      \hskip-\paperwidth%
+      \box\beamer@tempbox%
+    }%
+    \hskip-\Gm@rmargin%
+  }%
+%  \nointerlineskip
+%    \vskip-0.2pt
+%    \hbox to\textwidth{\hskip-\Gm@lmargin\pgfuseshading{beamer@topshade}\hskip-\Gm@rmargin}
+%    \vskip-2pt
+}

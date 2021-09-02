@@ -1,0 +1,41 @@
+\frametitle{Approche proposée}
+	\framesubtitle{Définition du modèle du réseau de neurone profond(DNN)}
+\begin{minipage}{0.4\textwidth}
+\begin{figure}[t]
+	       \centering
+ \includegraphics[height=0.7\textheight]{images/ModelDNN}
+	    \end{figure}
+\end{minipage}
+\hspace{0.5cm}
+ \pause{
+\begin{minipage}{0.5\textwidth}
+\lstset{
+		tabsize=1,
+		%numbers=left,
+		commentstyle=\color{green},
+		keywordstyle=\color{blue},
+		stringstyle=\color{red}	
+	}
+  	\begin{lstlisting}[language=Java,  basicstyle=\tiny]
+		public void createModelFFNN(MultiLayerNetwork modelAE){
+        FineTuneConfiguration fineTuneConf =
+        		new FineTuneConfiguration.Builder()
+                .updater(new Adam(0.01))
+                .build();
+
+        this.modelFFNN = new TransferLearning.Builder(modelAE)
+                .fineTuneConfiguration(fineTuneConf)
+                .removeOutputLayer()
+                .addLayer(new OutputLayer.Builder()
+                		.nIn(10)
+                		.nOut(this.numClasses)
+                		.activation(Activation.SOFTMAX)
+                		.lossFunction(new LossMCXENT())
+                		.build())
+                .build();
+        		modelFFNN.init();
+    	}
+    }
+	\end{lstlisting}	
+\end{minipage}
+   }

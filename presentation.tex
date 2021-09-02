@@ -1,0 +1,72 @@
+\documentclass[aspectratio=169,professionalfonts, 12pt]{beamer}
+\usepackage{lmodern}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[french,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage{ragged2e}   %new code
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{varioref}
+\usepackage[square,sort,comma,super,authoryear]{natbib}
+\usepackage{listings,xcolor}
+\usepackage{xmpmulti}
+\usepackage{epsfig}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+\usepackage{ru,graphicx,hyperref,url} % 
+\usepackage{booktabs}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{ amsmath, amssymb, amsfonts}
+\addtobeamertemplate{block begin}{}{\justifying}
+\setbeamertemplate{section in toc}[sections numbered]
+\AtBeginSection[]
+{
+  \begin{frame}[t]
+  \begin{multicols}{2}
+      \tableofcontents[currentsection]
+    \end{multicols}
+  \end{frame}
+
+}
+
+\date{\today}
+\definecolor{blueforest}{RGB}{80,00,00}
+\begin{document}
+\selectlanguage{french}
+\begin{frame}[plain, noframenumbering]
+	\titlepage
+\end{frame}
+\begin{frame}[plain,t, noframenumbering]
+	\frametitle{Table des matières}
+    \begin{multicols}{2}
+    \tableofcontents
+    \end{multicols}
+\end{frame}
+
+% Section titles are shown in at the top of the slides with the current section 
+% highlighted. Note that the number of sections determines the size of the top 
+% bar, and hence the university name and logo. If you do not add any sections 
+% they will not be visible.
+\section{INTRODUCTION}
+
+\subsection{Contexte}
+
+\subsection{Problématique}
+
+\subsection{Objectif}
+
+\section{APERÇU SUR L'\'ETAT DE L'ART}
+
+\section{CONTRIBUTIONS}
+
+\subsection{Approche proposée}
+
+\subsection{Résultats}
+
+\subsection{Comparaison}
+
+\section{CONCLUSION G\'EN\'ERALE}
+
+\end{document}

@@ -1,0 +1,84 @@
+@article{remondino2011,
+  title={Heritage recording and 3D modeling with photogrammetry and 3D scanning},
+  author={Remondino, Fabio},
+  journal={Remote Sensing},
+  volume={3},
+  number={6},
+  pages={1104--1138},
+  year={2011},
+  publisher={Molecular Diversity Preservation International}
+}
+@article{oldow2008application,
+  title={Application of Terrestrial Laser Scanning in determining the pattern of late Pleistocene and Holocene fault displacement from the offset of pluvial lake shorelines in the Alvord extensional basin, northern Great Basin, USA},
+  author={Oldow, John S and Singleton, Eron S},
+  journal={Geosphere},
+  volume={4},
+  number={3},
+  pages={536--563},
+  year={2008},
+  publisher={Geological Society of America}
+}
+@article{tang2010automatic,
+  title={Automatic reconstruction of as-built building information models from laser-scanned point clouds: A review of related techniques},
+  author={Tang, Pingbo and Huber, Daniel and Akinci, Burcu and Lipman, Robert and Lytle, Alan},
+  journal={Automation in construction},
+  volume={19},
+  number={7},
+  pages={829--843},
+  year={2010},
+  publisher={Elsevier}
+}
+@article{xu2014tridimensional,
+  title={Tridimensional reconstruction applied to cultural heritage with the use of camera-equipped UAV and terrestrial laser scanner},
+  author={Xu, Zhihua and Wu, Lixin and Shen, Yonglin and Li, Fashuai and Wang, Qiuling and Wang, Ran},
+  journal={Remote sensing},
+  volume={6},
+  number={11},
+  pages={10413--10434},
+  year={2014},
+  publisher={Multidisciplinary Digital Publishing Institute}
+}
+@inproceedings{murtiyoso2016acquisition,
+  title={Acquisition and Processing Experiences of Close Range UAV Images for the 3D Modeling of Heritage Buildings},
+  author={Murtiyoso, Arnadi and Grussenmeyer, Pierre and Koehl, Mathieu and Freville, Tristan},
+  booktitle={Euro-Mediterranean Conference},
+  pages={420--431},
+  year={2016},
+  organization={Springer}
+}
+@article{micheletti2015structure,
+  title={Structure from motion (SFM) photogrammetry},
+  author={Micheletti, Natan and Chandler, Jim H and Lane, Stuart N},
+  year={2015},
+  publisher={British Society for Geomorphology}
+}
+
+@article{wenzel2013image,
+  title={Image acquisition and model selection for multi-view stereo},
+  author={Wenzel, K and Rothermel, M and Fritsch, D and Haala, N},
+  journal={Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci},
+  volume={40},
+  pages={251--258},
+  year={2013}
+}
+@book{szeliski2010computer,
+  title={Computer vision: algorithms and applications},
+  author={Szeliski, Richard},
+  year={2010},
+  publisher={Springer Science \& Business Media}
+}
+
+@misc{refstatic,
+	author = {statista},
+	title = {Internet of Things (IoT) connected devices installed base worldwide from 2015 to 2025},
+	OPTannote = {vue April 2020},
+	url       = {https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/} ,
+	year = {2020}	
+}
+@article{fmi,
+  title={Cyber Risk for the Financial Sector: A Framework for Quantitative Assessment},
+  author={Bouveret, Antoine},
+  journal={Available at SSRN 3203026},
+  year={2018},
+  url={https://www.imf.org/external/french/np/blog/2018/062218f.htm}
+}
