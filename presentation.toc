@@ -13,8 +13,8 @@
 \beamer@subsectionintoc {3}{1}{Approche proposée}{36}{0}{3}
 \beamer@subsectionintoc {3}{2}{Application de l'inférence bayésienne avec des modèles IRT}{37}{0}{3}
 \beamer@subsectionintoc {3}{3}{Résultats des modèles IRT}{45}{0}{3}
-\beamer@subsectionintoc {3}{4}{Regroupement des items à l’aide de la matrice de similarité}{45}{0}{3}
-\beamer@subsectionintoc {3}{5}{Résultats des méthodes de clustering}{53}{0}{3}
-\beamer@sectionintoc {4}{CONCLUSION G\'EN\'ERALE}{56}{0}{4}
-\beamer@subsectionintoc {4}{1}{Conclusion}{57}{0}{4}
-\beamer@subsectionintoc {4}{2}{Perspective}{58}{0}{4}
+\beamer@subsectionintoc {3}{4}{Regroupement des items à l’aide de la matrice de similarité}{49}{0}{3}
+\beamer@subsectionintoc {3}{5}{Résultats des méthodes de clustering}{57}{0}{3}
+\beamer@sectionintoc {4}{CONCLUSION G\'EN\'ERALE}{60}{0}{4}
+\beamer@subsectionintoc {4}{1}{Conclusion}{61}{0}{4}
+\beamer@subsectionintoc {4}{2}{Perspective}{62}{0}{4}
