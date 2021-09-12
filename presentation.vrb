@@ -1,41 +1,18 @@
+\frametitle{Code}
 \frametitle{Approche proposée}
-	\framesubtitle{Définition du modèle du réseau de neurone profond(DNN)}
-\begin{minipage}{0.4\textwidth}
-\begin{figure}[t]
-	       \centering
- \includegraphics[height=0.7\textheight]{images/ModelDNN}
-	    \end{figure}
-\end{minipage}
-\hspace{0.5cm}
- \pause{
-\begin{minipage}{0.5\textwidth}
-\lstset{
-		tabsize=1,
-		%numbers=left,
-		commentstyle=\color{green},
-		keywordstyle=\color{blue},
-		stringstyle=\color{red}	
-	}
-  	\begin{lstlisting}[language=Java,  basicstyle=\tiny]
-		public void createModelFFNN(MultiLayerNetwork modelAE){
-        FineTuneConfiguration fineTuneConf =
-        		new FineTuneConfiguration.Builder()
-                .updater(new Adam(0.01))
-                .build();
+  \framesubtitle{Application de l'inférence bayésienne avec des modèles IRT}
+  \(\displaystyle \blacksquare \) \textbf{\underline{ Inférence }}
 
-        this.modelFFNN = new TransferLearning.Builder(modelAE)
-                .fineTuneConfiguration(fineTuneConf)
-                .removeOutputLayer()
-                .addLayer(new OutputLayer.Builder()
-                		.nIn(10)
-                		.nOut(this.numClasses)
-                		.activation(Activation.SOFTMAX)
-                		.lossFunction(new LossMCXENT())
-                		.build())
-                .build();
-        		modelFFNN.init();
-    	}
-    }
-	\end{lstlisting}	
-\end{minipage}
-   }
+  \justifying
+  \begin{minipage}{\textwidth}
+  \begin{block}{Compilation}
+    \begin{lstlisting}[language=Stan,basicstyle=\small,framesep=4.5mm,framexleftmargin=2.5mm,tabsize=2]
+      posteriori = stan.build(_1pl_model,data=train_data,random_seed=2021)
+    \end{lstlisting}
+  \end{block}
+  \begin{block}{\'Echantillonnage}
+    \begin{lstlisting}[language=Stan,basicstyle=\small,framesep=4.5mm,framexleftmargin=2.5mm,tabsize=2]
+      fit = posteriori.sample(num_chains=4, num_samples=2000,num_warmup=1000,num_thin=1)
+    \end{lstlisting}
+  \end{block}
+  \end{minipage}

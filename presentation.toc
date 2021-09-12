@@ -8,9 +8,13 @@
 \beamer@subsectionintoc {2}{1}{Educational data minig}{8}{0}{2}
 \beamer@subsectionintoc {2}{2}{Modèle de l’apprenant}{10}{0}{2}
 \beamer@subsectionintoc {2}{3}{Inférence bayésienne}{14}{0}{2}
-\beamer@subsectionintoc {2}{4}{La théorie de la réponse à items}{19}{0}{2}
-\beamer@sectionintoc {3}{CONTRIBUTIONS}{25}{0}{3}
-\beamer@subsectionintoc {3}{1}{Approche proposée}{26}{0}{3}
-\beamer@subsectionintoc {3}{2}{Résultats}{26}{0}{3}
-\beamer@subsectionintoc {3}{3}{Comparaison}{26}{0}{3}
-\beamer@sectionintoc {4}{CONCLUSION G\'EN\'ERALE}{26}{0}{4}
+\beamer@subsectionintoc {2}{4}{Analyse des items}{19}{0}{2}
+\beamer@sectionintoc {3}{CONTRIBUTIONS}{35}{0}{3}
+\beamer@subsectionintoc {3}{1}{Approche proposée}{36}{0}{3}
+\beamer@subsectionintoc {3}{2}{Application de l'inférence bayésienne avec des modèles IRT}{37}{0}{3}
+\beamer@subsectionintoc {3}{3}{Résultats des modèles IRT}{45}{0}{3}
+\beamer@subsectionintoc {3}{4}{Regroupement des items à l’aide de la matrice de similarité}{45}{0}{3}
+\beamer@subsectionintoc {3}{5}{Résultats des méthodes de clustering}{53}{0}{3}
+\beamer@sectionintoc {4}{CONCLUSION G\'EN\'ERALE}{56}{0}{4}
+\beamer@subsectionintoc {4}{1}{Conclusion}{57}{0}{4}
+\beamer@subsectionintoc {4}{2}{Perspective}{58}{0}{4}
