@@ -2,19 +2,19 @@
 \babel@toc {french}{}
 \beamer@sectionintoc {1}{INTRODUCTION}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Contexte}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{Problématique}{6}{0}{1}
-\beamer@subsectionintoc {1}{3}{Objectif}{10}{0}{1}
-\beamer@sectionintoc {2}{APERÇU SUR L'\'ETAT DE L'ART}{12}{0}{2}
-\beamer@subsectionintoc {2}{1}{Educational data minig}{13}{0}{2}
-\beamer@subsectionintoc {2}{2}{Modèle de l’apprenant}{15}{0}{2}
-\beamer@subsectionintoc {2}{3}{Analyse des items}{19}{0}{2}
-\beamer@subsectionintoc {2}{4}{Inférence bayésienne}{35}{0}{2}
-\beamer@sectionintoc {3}{CONTRIBUTIONS}{40}{0}{3}
-\beamer@subsectionintoc {3}{1}{Approche proposée}{41}{0}{3}
-\beamer@subsectionintoc {3}{2}{Application de l'inférence bayésienne avec des modèles IRT}{42}{0}{3}
-\beamer@subsectionintoc {3}{3}{Résultats des modèles IRT}{50}{0}{3}
-\beamer@subsectionintoc {3}{4}{Regroupement des items à l’aide de la matrice de similarité}{54}{0}{3}
-\beamer@subsectionintoc {3}{5}{Résultats des méthodes de clustering}{62}{0}{3}
-\beamer@sectionintoc {4}{CONCLUSION G\'EN\'ERALE}{65}{0}{4}
-\beamer@subsectionintoc {4}{1}{Conclusion}{66}{0}{4}
-\beamer@subsectionintoc {4}{2}{Perspective}{67}{0}{4}
+\beamer@subsectionintoc {1}{2}{Problématique}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{Objectif}{11}{0}{1}
+\beamer@sectionintoc {2}{APERÇU SUR L'\'ETAT DE L'ART}{13}{0}{2}
+\beamer@subsectionintoc {2}{1}{Educational data minig}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{Modèle de l’apprenant}{16}{0}{2}
+\beamer@subsectionintoc {2}{3}{Analyse des items}{20}{0}{2}
+\beamer@subsectionintoc {2}{4}{Inférence bayésienne}{32}{0}{2}
+\beamer@sectionintoc {3}{CONTRIBUTIONS}{39}{0}{3}
+\beamer@subsectionintoc {3}{1}{Approche proposée}{40}{0}{3}
+\beamer@subsectionintoc {3}{2}{Application de l'inférence bayésienne avec des modèles IRT}{41}{0}{3}
+\beamer@subsectionintoc {3}{3}{Résultats des modèles IRT}{49}{0}{3}
+\beamer@subsectionintoc {3}{4}{Regroupement des items à l’aide de la matrice de similarité}{53}{0}{3}
+\beamer@subsectionintoc {3}{5}{Résultats des méthodes de clustering}{61}{0}{3}
+\beamer@sectionintoc {4}{CONCLUSION G\'EN\'ERALE}{64}{0}{4}
+\beamer@subsectionintoc {4}{1}{Conclusion}{65}{0}{4}
+\beamer@subsectionintoc {4}{2}{Perspective}{66}{0}{4}
