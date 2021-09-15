@@ -689,17 +689,77 @@
 
 \subsection{Approche proposée}
 
+
+\begin{frame}
+  \justifying 
+  \begin{minipage}{\textwidth}
+    \begin{center}
+      \Huge \textcolor{blueforest}{3. CONTRIBUTIONS} \\
+      \vspace{0.5em}
+      \huge \hspace{0.5em} Approche proposée
+    \end{center}
+  \end{minipage}
+\end{frame}
+
+
 \begin{frame}
   \frametitle{Approche proposée}
   \justifying 
   \begin{minipage}{\textwidth}
   \begin{figure}[H]
-      \includegraphics[height=6cm]{images/contribution/approch.png}
+      \includegraphics[height=6cm]{images/contribution/aproche.png}
   \end{figure}
   \end{minipage}
 \end{frame}
 
+
 \subsection{Application de l'inférence bayésienne avec des modèles IRT}
+
+\begin{frame}
+  \justifying 
+  \begin{minipage}{\textwidth}
+    \begin{center}
+      \huge Application de l'inférence bayésienne avec des modèles IRT
+    \end{center}
+  \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile,plain]{Code}
+  \frametitle{Approche proposée}
+  \framesubtitle{Application de l'inférence bayésienne avec des modèles IRT}
+  \begin{minipage}{0.3\textwidth}
+    \begin{figure}[t]
+      \begin{center}
+        \includegraphics[scale=0.3]{images/contribution/stan.png}
+      \end{center}
+    \end{figure}
+    \begin{block}{}
+      Stan est plate-forme de modélsation statistique et d'inference statistique bayésienne.
+    \end{block}
+  \end{minipage}
+  \begin{minipage}{1mm}
+  \hspace{1mm}
+  \end{minipage}
+  \begin{minipage}{0.5\textwidth}
+    \begin{block}{le bloc de données}
+      \begin{lstlisting}[language=Stan,basicstyle=\scriptsize,tabsize=1,framesep=0pt,framexleftmargin=0pt,xleftmargin=0pt,xrightmargin=0pt,breakindent=0pt,resetmargins=true]
+      functions {
+      }
+      data {
+      }
+      parameters {
+      }
+      transformed parameters {
+      }
+      model {
+      }
+      generated quantities {
+      }
+      \end{lstlisting}
+      \end{block}
+  \end{minipage}	
+\end{frame}
 
 \begin{frame}[fragile,plain]{Code}
   \frametitle{Approche proposée}
@@ -743,9 +803,9 @@
   \justifying 
   \(\displaystyle \blacksquare \) \textbf{\underline{Spécification et construction des modèles}}
   \begin{minipage}{\textwidth}
-  \begin{block}{bloc de paramètres}
+  \begin{block}{le bloc de paramètres}
     \begin{lstlisting}[language=Stan,basicstyle=\scriptsize,framesep=4.5mm,framexleftmargin=2.5mm,tabsize=2]
-    	// parameters
+    parameters {
     real ability[S];             //  alpha: ability of student
     real difficulty[I];          //  beta: difficulty of question
     real delta;                   // mean student ability
@@ -754,6 +814,7 @@
     // end for 2PL
     vector<lower=0,upper=1>[I] guessing;    //
     // end for 3PL
+    }
     \end{lstlisting}
   \end{block}
   \end{minipage}
@@ -765,12 +826,12 @@
   \justifying 
   \(\displaystyle \blacksquare \) \textbf{\underline{Spécification et construction des modèles}}
   \begin{minipage}{\textwidth}
-  \begin{block}{bloc modèle (modèle de Rasch)}
+  \begin{block}{le bloc modèle (modèle de Rasch)}
     \begin{lstlisting}[language=Stan,basicstyle=\scriptsize,framesep=4.5mm,framexleftmargin=2.5mm,tabsize=2]
       model {
-        ability ~ normal(0,1);         
-        difficulty ~ normal(0,1);   
-        delta ~ normal(0.75,1);
+        ability ~ normal(0,1);   // prior      
+        difficulty ~ normal(0,1); // prior   
+        delta ~ normal(0.75,1);  // prior 
         for(n in 1:N)
           grade[n] ~ bernoulli_logit(ability[subject[n]] - difficulty[item[n]] + delta);
       }
@@ -778,6 +839,41 @@
   \end{block}
   \end{minipage}
 \end{frame}
+
+\begin{frame}[fragile,plain]{Code}
+  \frametitle{Approche proposée}
+  \framesubtitle{Application de l'inférence bayésienne avec des modèles IRT}
+  \(\displaystyle \blacksquare \) \textbf{\underline{Spécification et construction des modèles}}
+  \begin{minipage}{0.48\textwidth}
+    \begin{block}{le bloc de données}
+      \begin{lstlisting}[language=Stan,basicstyle=\scriptsize,framesep=4.5mm,framexleftmargin=2.5mm,tabsize=2]
+        model {
+          for(n in 1:N)
+            grade[n] ~ bernoulli_logit(ability[subject[n]] - difficulty[item[n]] + delta);
+        }
+      \end{lstlisting}
+    \end{block}
+  \end{minipage}
+  \begin{minipage}{1mm}
+  \hspace{1mm}
+  \end{minipage}
+  \begin{minipage}{0.48\textwidth}
+    \begin{block}{Logit}
+      \begin{equation}
+        inv\_logit(x) = \frac{\exp(x)}{1+ \exp(x)}
+      \end{equation}
+    \end{block}
+  \end{minipage}
+
+  \begin{minipage}{\textwidth}
+    \begin{block}{La fonction logistique du modèle de Rasch}
+      \begin{equation}
+        P(grade = 1) = \frac{\exp \left[ ability - difficulty + delta  \right]  }{1+ \exp \left[ ability - difficulty + delta \right] }
+      \end{equation}
+    \end{block}
+  \end{minipage}	
+\end{frame}
+
 \begin{frame}[fragile]{Code}
   \frametitle{Approche proposée}
   \framesubtitle{Application de l'inférence bayésienne avec des modèles IRT}
@@ -787,10 +883,10 @@
   \begin{block}{bloc modèle (modèle 2PL)}
     \begin{lstlisting}[language=Stan,basicstyle=\scriptsize,framesep=4.5mm,framexleftmargin=2.5mm,tabsize=2]
       model {
-        ability ~ normal(0,1);         
-        difficulty ~ normal(0,1);   
-        discrimination ~ lognormal(0,1);
-        delta ~ normal(0.75,1);
+        ability ~ normal(0,1);         // prior
+        difficulty ~ normal(0,1);   // prior
+        discrimination ~ lognormal(0,1);   // prior
+        delta ~ normal(0.75,1);     // prior
         grade ~ bernoulli_logit(discrimination[item] .* (ability[subject] - (difficulty[item] + delta)));	
       }
     \end{lstlisting}
@@ -868,6 +964,15 @@
 \subsection{Résultats des modèles IRT}
 
 \begin{frame}
+  \justifying 
+  \begin{minipage}{\textwidth}
+    \begin{center}
+      \huge Résultats des modèles IRT
+    \end{center}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}
   \frametitle{Résultats des modèles IRT}
   \justifying 
   \begin{minipage}{\textwidth} 
@@ -916,6 +1021,15 @@
 \end{frame}
 
 \subsection{Regroupement des items à l’aide de la matrice de similarité}
+
+\begin{frame}
+  \justifying 
+  \begin{minipage}{\textwidth}
+    \begin{center}
+      \huge Regroupement des items à l’aide de la matrice de similarité
+    \end{center}
+  \end{minipage}
+\end{frame}
 
 \begin{frame}
   \justifying 
@@ -1016,6 +1130,17 @@
 \subsection{Résultats des méthodes de clustering}
 
 \begin{frame}
+  \justifying 
+  \begin{minipage}{\textwidth}
+    \begin{center}
+      \huge Résultats des méthodes de clustering
+    \end{center}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}
+  \(\displaystyle \blacksquare \) \textbf{\underline{Réduction de dimensionnalité avec ACP}} \\
+  \vspace{0.5em}
   \justifying
   \begin{minipage}{\textwidth}
     \begin{figure}[H]
@@ -1029,6 +1154,19 @@
 \end{frame}
 
 \begin{frame}
+  \(\displaystyle \blacksquare \) \textbf{\underline{Clustering hiérarchique agglomératif}} \\
+  \justifying 
+  \begin{minipage}{\textwidth}
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[scale=0.18]{images/contribution/hierarchical_agglo_divisive.png}
+      \end{center}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}
+  \(\displaystyle \blacksquare \) \textbf{\underline{Clustering hiérarchique agglomératif}} \\
   \justifying
   \begin{minipage}{\textwidth}
     \begin{figure}[H]

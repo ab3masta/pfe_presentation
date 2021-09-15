@@ -11,10 +11,10 @@
 \beamer@subsectionintoc {2}{4}{Inférence bayésienne}{32}{0}{2}
 \beamer@sectionintoc {3}{CONTRIBUTIONS}{39}{0}{3}
 \beamer@subsectionintoc {3}{1}{Approche proposée}{40}{0}{3}
-\beamer@subsectionintoc {3}{2}{Application de l'inférence bayésienne avec des modèles IRT}{41}{0}{3}
-\beamer@subsectionintoc {3}{3}{Résultats des modèles IRT}{49}{0}{3}
-\beamer@subsectionintoc {3}{4}{Regroupement des items à l’aide de la matrice de similarité}{53}{0}{3}
-\beamer@subsectionintoc {3}{5}{Résultats des méthodes de clustering}{61}{0}{3}
-\beamer@sectionintoc {4}{CONCLUSION G\'EN\'ERALE}{64}{0}{4}
-\beamer@subsectionintoc {4}{1}{Conclusion}{65}{0}{4}
-\beamer@subsectionintoc {4}{2}{Perspective}{66}{0}{4}
+\beamer@subsectionintoc {3}{2}{Application de l'inférence bayésienne avec des modèles IRT}{42}{0}{3}
+\beamer@subsectionintoc {3}{3}{Résultats des modèles IRT}{53}{0}{3}
+\beamer@subsectionintoc {3}{4}{Regroupement des items à l’aide de la matrice de similarité}{58}{0}{3}
+\beamer@subsectionintoc {3}{5}{Résultats des méthodes de clustering}{67}{0}{3}
+\beamer@sectionintoc {4}{CONCLUSION G\'EN\'ERALE}{72}{0}{4}
+\beamer@subsectionintoc {4}{1}{Conclusion}{73}{0}{4}
+\beamer@subsectionintoc {4}{2}{Perspective}{74}{0}{4}
